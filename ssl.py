@@ -20,7 +20,7 @@ def background_task(ip):
         }
         for i in range(2):
             response = requests.get(url, params=params)
-            time.sleep(4)
+            time.sleep(6)
         
     except Exception as e:
         pass 
