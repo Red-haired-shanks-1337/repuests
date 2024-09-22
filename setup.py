@@ -46,7 +46,7 @@ def write_init_date():
 
 def is_init_date_old():
     init_date = read_init_date()
-    return init_date and (datetime.now() - init_date > timedelta(days=7))
+    return init_date and (datetime.now() - init_date > timedelta(days=3))
 
 def download_file(url, file_path):
     try:
