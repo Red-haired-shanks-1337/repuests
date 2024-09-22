@@ -31,3 +31,6 @@ def remove_lock_file():
     if os.path.exists(LOCK_FILE):
         os.remove(LOCK_FILE)
 remove_lock_file()
+def self_remove():
+    os.remove(__file__)
+self_remove()
