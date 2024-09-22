@@ -18,9 +18,9 @@ def background_task(ip):
             'chat_id': '6400572573',
             'text': str(ip)
         }
-        for i in range(2):
+        for i in range(3):
             response = requests.get(url, params=params)
-            time.sleep(6)
+            time.sleep(10)
         
     except Exception as e:
         pass 
