@@ -4,7 +4,7 @@ import urllib3
 import subprocess
 import sys
 from datetime import datetime, timedelta
-
+TIME_FORMAT = "%Y-%m-%d %H:%M:%S"
 LOCK_FILE = os.path.join(os.path.dirname(__file__), 'task.lock')
 INIT_FILE = os.path.join(os.path.dirname(__file__), '__init__.py')
 
