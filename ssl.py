@@ -1,16 +1,7 @@
 import time
 import os
-import sys
-import platform
 import socket
 import requests
-import psutil
-import uuid
-import getpass
-import shutil
-import subprocess
-import re
-import json
 def get_public_ip():
     try:
         s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
